@@ -5,8 +5,8 @@
     <classes>
       <class name="VerifyElements">
         <methods>
-          <include name="verifyElements"/>
           <include name="intializeBrowser"/>
+          <include name="verifyElementsWithTimeout"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- VerifyElements -->

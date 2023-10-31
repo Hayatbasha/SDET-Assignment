@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-30T16:59:17 UTC" name="All Test Suite" finished-at="2023-10-30T16:59:27 UTC" duration-ms="10713">
+  <suite started-at="2023-10-31T05:13:12 UTC" name="All Test Suite" finished-at="2023-10-31T05:13:40 UTC" duration-ms="27590">
     <groups>
     </groups>
-    <test started-at="2023-10-30T16:59:17 UTC" name="C:/Users/R924826/Desktop/SDET-Assignment" finished-at="2023-10-30T16:59:27 UTC" duration-ms="10713">
+    <test started-at="2023-10-31T05:13:12 UTC" name="C:/Users/R924826/Desktop/SDET-Assignment" finished-at="2023-10-31T05:13:40 UTC" duration-ms="27590">
       <class name="VerifyElements">
-        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:VerifyElements@67080771]" started-at="2023-10-30T16:59:17 UTC" name="intializeBrowser" finished-at="2023-10-30T16:59:25 UTC" duration-ms="8183" status="PASS">
+        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:VerifyElements@10959ece]" started-at="2023-10-31T05:13:12 UTC" name="intializeBrowser" finished-at="2023-10-31T05:13:22 UTC" duration-ms="10047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializeBrowser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:VerifyElements@67080771]" started-at="2023-10-30T16:59:25 UTC" name="tearDown" finished-at="2023-10-30T16:59:27 UTC" duration-ms="2485" status="PASS">
+        <test-method signature="verifyElementsWithTimeout()[pri:0, instance:VerifyElements@10959ece]" started-at="2023-10-31T05:13:22 UTC" name="verifyElementsWithTimeout" finished-at="2023-10-31T05:13:24 UTC" duration-ms="2024" status="FAIL">
+          <exception class="org.testng.internal.thread.ThreadTimeoutException">
+            <message>
+              <![CDATA[Method VerifyElements.verifyElementsWithTimeout() didn't finish within the time-out 2000]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.thread.ThreadTimeoutException: Method VerifyElements.verifyElementsWithTimeout() didn't finish within the time-out 2000
+at java.base@11.0.18/jdk.internal.misc.Unsafe.park(Native Method)
+at java.base@11.0.18/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+at java.base@11.0.18/java.util.concurrent.CompletableFuture$Signaller.block(CompletableFuture.java:1798)
+at java.base@11.0.18/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3128)
+at java.base@11.0.18/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1868)
+at java.base@11.0.18/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+at app//org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:386)
+at app//org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda$244/0x000000010020f040.execute(Unknown Source)
+at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent$$Lambda$395/0x00000001002d4c40.execute(Unknown Source)
+at app//org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at app//org.openqa.selenium.remote.http.Filter$$Lambda$245/0x000000010020f440.execute(Unknown Source)
+at app//org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:359)
+at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at app//org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+at app//VerifyElements.verifyElementsWithTimeout(VerifyElements.java:63)
+at java.base@11.0.18/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base@11.0.18/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base@11.0.18/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base@11.0.18/java.lang.reflect.Method.invoke(Method.java:566)
+at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at app//org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)
+at app//org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)
+at app//org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)
+at java.base@11.0.18/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base@11.0.18/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base@11.0.18/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.thread.ThreadTimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyElementsWithTimeout -->
+        <test-method signature="verifyElements()[pri:1, instance:VerifyElements@10959ece]" started-at="2023-10-31T05:13:24 UTC" name="verifyElements" finished-at="2023-10-31T05:13:38 UTC" duration-ms="13584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyElements -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:VerifyElements@10959ece]" started-at="2023-10-31T05:13:38 UTC" name="tearDown" finished-at="2023-10-31T05:13:40 UTC" duration-ms="1850" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
