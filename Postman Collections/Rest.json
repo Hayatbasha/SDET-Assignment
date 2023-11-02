@@ -242,9 +242,9 @@
 								"id": "dc28aae4-18be-4bdc-8b95-73c18c0d5f16",
 								"exec": [
 									"var data = pm.response.json();\r",
-									"pm.test(\"verify json values\",function(){\r",
-									"    pm.expect(data.name.common).is.to.equal(\"British Indian Ocean Territory\")\r",
-									"})"
+									"pm.test(\"verify json values\", function(){\r",
+									"    pm.expect(data.capital).is.to.equal(\"Diego Garcia\");\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
