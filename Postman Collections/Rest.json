@@ -51,77 +51,7 @@
 						"url": "https://restcountries.com/v3.1/name/India",
 						"description": "This request demonstrates how to work with the `pm` API. Send the request to view the results of the sample tests in the \"Test Results\" tab in the response viewer.\n\n### Working with the `pm` API\n\nUse the `pm` API to write your test under the **Tests** tab in Postman. The `pm.test()` method accepts two parameters -\n\nThe first parameter is the name of the test, so it's important to give your test a descriptive name to provide more information in case the test fails.\n\nThe second parameter is a function whereby if any assertions within your function fail, then the test will fail.\n\n```\npm.test(\"Name of the second test\", function () {\n    // make as many assertions as you'd like as part of this test\n    // if any assertion throws an error, this test will fail\n    pm.response.to.have.status(200);\n    pm.response.to.be.ok;\n    pm.response.to.be.json;\n});\n\n```"
 					},
-					"response": [
-						{
-							"id": "2d6b14cf-849d-4dca-b26b-8ec379c1b99d",
-							"name": "Status",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
-									"protocol": "https",
-									"host": [
-										"postman-echo",
-										"com"
-									],
-									"path": [
-										"get"
-									],
-									"query": [
-										{
-											"key": "foo1",
-											"value": "bar1"
-										},
-										{
-											"key": "foo2",
-											"value": "bar2"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Encoding",
-									"value": "gzip"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 15 Nov 2018 22:21:20 GMT"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"1cd-LkUKVugbVYQuMcTU7OTzmp77cMo\""
-								},
-								{
-									"key": "Server",
-									"value": "nginx"
-								},
-								{
-									"key": "Vary",
-									"value": "Accept-Encoding"
-								},
-								{
-									"key": "Content-Length",
-									"value": "348"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"args\": {\n        \"foo1\": \"bar1\",\n        \"foo2\": \"bar2\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"host\": \"postman-echo.com\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"cookie\": \"sails.sid=s%3AK8csWt5VZ3Oalv85HiBtffDcrSOJ-RiP.V14RjjJqkOv8%2BLXuHRmZ9l50G8S6eU16yLU%2F3N%2F0dKU\",\n        \"postman-token\": \"c6b9bca5-7369-4da8-a539-6c906d1133f2\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=bar1&foo2=bar2\"\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Positive and Negative tests",
@@ -161,80 +91,10 @@
 						"url": "https://restcountries.com/v3.1/name/India",
 						"description": "This request demonstrates how to make assertions with `pm.response()` or `pm.expect()` within the second parameter of the `pm.test()` function.\n\nSend the request to view the results of the sample tests in the \"Test Results\" tab in the response viewer.\n\n### Working with the `pm.expect()` and `pm.response()` functions\n\nThe `pm.expect()` generic assertion function relies on [Chai.js](https://www.chaijs.com/), a BDD / TDD assertion library for node.\n\n```\npm.test(\"Environment to be production\", function () {\n  pm.expect(pm.environment.get(\"env\")).to.equal(\"production\");\n});\n\n```\n\nYou can also use a second optional parameter with the `pm.expect()` function to create a custom error message.\n\n```\npm.test(\"Using a custom error message\", function () {\n    pm.expect(false, 'nooo why fail??').to.be.ok;\n});\n\n```\n\nThe `pm.response()` method uses `pm.expect()` under the hood.\n\nUsing `pm.response()` as your base assertion allows you to receive more specific error messages when debugging. Here are some [`pm.response()` methods](https://www.getpostman.com/docs/v6/postman/scripts/postman_sandbox_api_reference#response-assertion-api-in-test-scripts). Review the error messages under the \"Test Results\" tab to see the difference."
 					},
-					"response": [
-						{
-							"id": "d8993cbc-a028-4764-b229-99771d0894d4",
-							"name": "Status",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
-									"protocol": "https",
-									"host": [
-										"postman-echo",
-										"com"
-									],
-									"path": [
-										"get"
-									],
-									"query": [
-										{
-											"key": "foo1",
-											"value": "bar1"
-										},
-										{
-											"key": "foo2",
-											"value": "bar2"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Encoding",
-									"value": "gzip"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 15 Nov 2018 22:21:20 GMT"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"1cd-LkUKVugbVYQuMcTU7OTzmp77cMo\""
-								},
-								{
-									"key": "Server",
-									"value": "nginx"
-								},
-								{
-									"key": "Vary",
-									"value": "Accept-Encoding"
-								},
-								{
-									"key": "Content-Length",
-									"value": "348"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"args\": {\n        \"foo1\": \"bar1\",\n        \"foo2\": \"bar2\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"host\": \"postman-echo.com\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"cookie\": \"sails.sid=s%3AK8csWt5VZ3Oalv85HiBtffDcrSOJ-RiP.V14RjjJqkOv8%2BLXuHRmZ9l50G8S6eU16yLU%2F3N%2F0dKU\",\n        \"postman-token\": \"c6b9bca5-7369-4da8-a539-6c906d1133f2\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=bar1&foo2=bar2\"\n}"
-						}
-					]
+					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Response Assertion",
 					"event": [
 						{
 							"listen": "test",
@@ -243,7 +103,7 @@
 								"exec": [
 									"var data = pm.response.json();\r",
 									"pm.test(\"verify json values\", function(){\r",
-									"    pm.expect(data[0].capital).to.eql(\"Diego Garcia\")\r",
+									"    pm.expect(data[0].name.common).to.equals(\"British Indian Ocean Territory\")\r",
 									"});"
 								],
 								"type": "text/javascript"
