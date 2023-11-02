@@ -243,7 +243,7 @@
 								"exec": [
 									"var data = pm.response.json();\r",
 									"pm.test(\"verify json values\", function(){\r",
-									"    pm.expect(data.capital).is.to.equal(\"Diego Garcia\");\r",
+									"    pm.expect(data.name).is.to.equal(\"Diego Garcia\");\r",
 									"});"
 								],
 								"type": "text/javascript"
