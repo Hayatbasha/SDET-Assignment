@@ -10,7 +10,7 @@
 			"name": "Tests",
 			"item": [
 				{
-					"name": "TestStatus",
+					"name": "Status code check",
 					"event": [
 						{
 							"listen": "test",
@@ -124,20 +124,21 @@
 					]
 				},
 				{
-					"name": "Assertion",
+					"name": "Positive and Negative tests",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "74e3dd61-0793-45f6-9f83-fb130daee917",
 								"exec": [
-									"// Note the difference in the test failure message under the **Test Results** tab when using pm.response vs. pm.expect",
+									"//Positive test case",
 									"pm.test(\"Status code is 200 - pm.response\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Status code is 200 - pm.expect\", function () {",
-									"    pm.expect(pm.response.code).to.equal(200); ",
+									"//Negative test case",
+									"pm.test(\"Status code is 400 - pm.expect\", function () {",
+									"    pm.expect(pm.response.code).to.equal(400); ",
 									"});",
 									"",
 									"// Using a 2nd optional parameter with the pm.expect function to create a custom error message ",
