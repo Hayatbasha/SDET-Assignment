@@ -47,27 +47,19 @@
 					"response": []
 				},
 				{
-					"name": "Positive and Negative tests",
+					"name": "Negative tests",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "74e3dd61-0793-45f6-9f83-fb130daee917",
 								"exec": [
-									"//Positive test case",
-									"pm.test(\"Status code is 200 - pm.response\", function () {",
-									"    pm.response.to.have.status(200);",
+									"",
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
 									"});",
 									"",
-									"//Negative test case",
-									"pm.test(\"Status code is 400 - pm.expect\", function () {",
-									"    pm.expect(pm.response.code).to.equal(400); ",
-									"});",
 									"",
-									"// Using a 2nd optional parameter with the pm.expect function to create a custom error message ",
-									"pm.test(\"Using a custom error message\", function () {",
-									"    pm.expect(true, 'nooo why fail??').to.be.ok;",
-									"});",
 									""
 								],
 								"type": "text/javascript"
@@ -81,7 +73,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "https://restcountries.com/v3.1/name/India",
+						"url": "https://restcountries.com/v3.1/name/Indiaa",
 						"description": "This request demonstrates how to make assertions with `pm.response()` or `pm.expect()` within the second parameter of the `pm.test()` function.\n\nSend the request to view the results of the sample tests in the \"Test Results\" tab in the response viewer.\n\n### Working with the `pm.expect()` and `pm.response()` functions\n\nThe `pm.expect()` generic assertion function relies on [Chai.js](https://www.chaijs.com/), a BDD / TDD assertion library for node.\n\n```\npm.test(\"Environment to be production\", function () {\n  pm.expect(pm.environment.get(\"env\")).to.equal(\"production\");\n});\n\n```\n\nYou can also use a second optional parameter with the `pm.expect()` function to create a custom error message.\n\n```\npm.test(\"Using a custom error message\", function () {\n    pm.expect(false, 'nooo why fail??').to.be.ok;\n});\n\n```\n\nThe `pm.response()` method uses `pm.expect()` under the hood.\n\nUsing `pm.response()` as your base assertion allows you to receive more specific error messages when debugging. Here are some [`pm.response()` methods](https://www.getpostman.com/docs/v6/postman/scripts/postman_sandbox_api_reference#response-assertion-api-in-test-scripts). Review the error messages under the \"Test Results\" tab to see the difference."
 					},
 					"response": []
