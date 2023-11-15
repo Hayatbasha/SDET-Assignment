@@ -77,34 +77,6 @@
 						"description": "This request demonstrates how to make assertions with `pm.response()` or `pm.expect()` within the second parameter of the `pm.test()` function.\n\nSend the request to view the results of the sample tests in the \"Test Results\" tab in the response viewer.\n\n### Working with the `pm.expect()` and `pm.response()` functions\n\nThe `pm.expect()` generic assertion function relies on [Chai.js](https://www.chaijs.com/), a BDD / TDD assertion library for node.\n\n```\npm.test(\"Environment to be production\", function () {\n  pm.expect(pm.environment.get(\"env\")).to.equal(\"production\");\n});\n\n```\n\nYou can also use a second optional parameter with the `pm.expect()` function to create a custom error message.\n\n```\npm.test(\"Using a custom error message\", function () {\n    pm.expect(false, 'nooo why fail??').to.be.ok;\n});\n\n```\n\nThe `pm.response()` method uses `pm.expect()` under the hood.\n\nUsing `pm.response()` as your base assertion allows you to receive more specific error messages when debugging. Here are some [`pm.response()` methods](https://www.getpostman.com/docs/v6/postman/scripts/postman_sandbox_api_reference#response-assertion-api-in-test-scripts). Review the error messages under the \"Test Results\" tab to see the difference."
 					},
 					"response": []
-				},
-				{
-					"name": "Response Assertion",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "dc28aae4-18be-4bdc-8b95-73c18c0d5f16",
-								"exec": [
-									"var data = pm.response.json();\r",
-									"pm.test(\"verify json values\", function(){\r",
-									"    pm.expect(data[0].name.common).to.equals(\"British Indian Ocean Territory\")\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "7e0b8759-eca5-4318-af54-7247fcd6863f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "https://restcountries.com/v3.1/name/India"
-					},
-					"response": []
 				}
 			],
 			"id": "1d7e77d7-6f8e-4704-8487-cd1f75d129fd",
